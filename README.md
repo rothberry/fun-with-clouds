@@ -1,24 +1,10 @@
-# README
+# Active and Cloud Storage
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```shell
+  rails active_storage:install
+```
 
-Things you may want to cover:
 
-* Ruby version
+## Resources
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- 
