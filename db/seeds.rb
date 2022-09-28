@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+puts "Delete"
+User.destroy_all
+
+puts "Creating users...."
+
+5.times do
+  User.create(username: Faker::Internet.username, email: Faker::Internet.free_email, image_url: Faker::Avatar.image(size: "200x200", format: "jpg"))
+end
+
+puts "DONE"

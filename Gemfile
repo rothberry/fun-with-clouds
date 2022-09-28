@@ -49,3 +49,5 @@ end
 
 gem "dotenv-rails", "~> 2.8"
 gem "aws-sdk-s3", "~> 1.114"
+
+gem "faker", "~> 2.23"

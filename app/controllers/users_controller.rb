@@ -10,13 +10,14 @@ class UsersController < ApplicationController
 
   # GET /users/1
   def show
-    render json: @user
+    render json: { user: @user, avatar: url_for(@user.avatar) }
   end
 
   # POST /users
   def create
+    puts "*******CREATING***************"
     @user = User.new(user_params)
-
+    # debugger
     if @user.save
       render json: @user, status: :created, location: @user
     else
@@ -39,13 +40,14 @@ class UsersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def user_params
-      params.require(:user).permit(:username, :email, :image_url)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user
+    @user = User.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def user_params
+    params.permit(:username, :email, :image_url, :avatar)
+  end
 end
